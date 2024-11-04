@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    border: 1px solid #ccc;
+}
+
+.highlight {
+    background-color: lightcoral;
+}
+
+#setting {
+    margin-top: 6px;
+}
