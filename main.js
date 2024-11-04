@@ -30,9 +30,10 @@ container.addEventListener("mouseleave", () => {
     isMouseDown = false;
 })
 
-container.addEventListener("mousemove", (e) => {
+container.addEventListener("mouseover", (e) => {
     if (isMouseDown && e.target.classList.contains("square")) {
-        e.target.classList.add("highlight");
+        // e.target.classList.add("highlight");
+        e.target.style.backgroundColor = randomColor();
     }
 })
 
@@ -59,3 +60,12 @@ setting.addEventListener("click", () => {
     container.textContent = '';
     setBoard(newSize);
 })
+
+// 生成随机背景色
+function randomColor() {
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    const color = `rgb(${red}, ${green}, ${blue})`;
+    return color;
+}
